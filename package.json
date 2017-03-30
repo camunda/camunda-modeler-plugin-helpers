@@ -1,0 +1,25 @@
+{
+  "name": "camunda-modeler-plugin-helpers",
+  "version": "0.0.0",
+  "description": "Helper functions for bundling your Camunda Modeler client plugins",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camunda/camunda-modeler-plugin-helpers.git"
+  },
+  "keywords": [
+    "camunda",
+    "modeler",
+    "plugin"
+  ],
+  "author": "Philipp Fromme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camunda/camunda-modeler-plugin-helpers/issues"
+  },
+  "homepage": "https://github.com/camunda/camunda-modeler-plugin-helpers#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-release": "^0.14.0"
+  }
+}
