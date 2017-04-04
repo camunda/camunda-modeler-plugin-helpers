@@ -7,7 +7,7 @@ Helper functions for bundling your Camunda Modeler client plugins.
 Your file to be bundled:
 
 ```javascript
-var registerBpmnJSPlugin = require('./camundaModelerPluginHelpers').registerBpmnJSPlugin;
+var registerBpmnJSPlugin = require('camunda-modeler-plugin-helpers').registerBpmnJSPlugin;
 var module = require('./index');
 
 registerBpmnJSPlugin(module);
