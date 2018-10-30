@@ -39,3 +39,21 @@ function registerBpmnJSPlugin(plugin) {
 }
 
 module.exports.registerBpmnJSPlugin = registerBpmnJSPlugin;
+
+/**
+ * Validate and register a bpmn-moddle extension plugin.
+ *
+ * Example use:
+ *
+ *    var registerBpmnJSModdleExtension = require('./camundaModelerPluginHelpers').registerBpmnJSModdleExtension;
+ *    var module = require('./index');
+ *
+ *    registerBpmnJSModdleExtension(module);
+ *
+ * @param {Object} plugin
+ */
+function registerBpmnJSModdleExtension(plugin) {
+  registerClientPlugin(plugin, 'bpmn.modeler.moddleExtension');
+}
+
+module.exports.registerBpmnJSModdleExtension = registerBpmnJSModdleExtension;
