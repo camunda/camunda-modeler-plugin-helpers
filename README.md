@@ -4,7 +4,9 @@ Helper functions for bundling your Camunda Modeler client plugins.
 
 ## How to use
 
-Your file to be bundled:
+### bpmn-js
+
+Register plugin to be passed as additional module:
 
 ```javascript
 var registerBpmnJSPlugin = require('camunda-modeler-plugin-helpers').registerBpmnJSPlugin;
@@ -13,6 +15,15 @@ var module = require('./index');
 registerBpmnJSPlugin(module);
 ```
 
-## Currently Supported Client plugins
+Register plugin to be passed as moddle extension:
 
-- bpmn-js
+```javascript
+var registerBpmnJSModdleExtension = require('camunda-modeler-plugin-helpers').registerBpmnJSModdleExtension;
+var module = require('./index');
+
+registerBpmnJSModdleExtension(module);
+```
+
+## License
+
+MIT
