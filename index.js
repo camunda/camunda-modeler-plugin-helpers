@@ -4,7 +4,7 @@
  * @param {Object} plugin
  * @param {String} type
  */
-function registerClientPlugin(plugin, type) {
+export function registerClientPlugin(plugin, type) {
   var plugins = window.plugins || [];
   window.plugins = plugins;
 
@@ -25,35 +25,45 @@ function registerClientPlugin(plugin, type) {
 /**
  * Validate and register a bpmn-js plugin.
  *
- * Example use:
+ * @param {Object} module
  *
- *    var registerBpmnJSPlugin = require('./camundaModelerPluginHelpers').registerBpmnJSPlugin;
- *    var module = require('./index');
+ * @example
  *
- *    registerBpmnJSPlugin(module);
+ * import {
+ *   registerBpmnJSPlugin
+ * } from 'camunda-modeler-plugin-helpers';
  *
- * @param {Object} plugin
+ * const BpmnJSModule = {
+ *   __init__: [ 'myService' ],
+ *   myService: [ 'type', ... ]
+ * };
+ *
+ * registerBpmnJSPlugin(BpmnJSModule);
  */
-function registerBpmnJSPlugin(plugin) {
-  registerClientPlugin(plugin, 'bpmn.modeler.additionalModules');
+export function registerBpmnJSPlugin(module) {
+  registerClientPlugin(module, 'bpmn.modeler.additionalModules');
 }
-
-module.exports.registerBpmnJSPlugin = registerBpmnJSPlugin;
 
 /**
  * Validate and register a bpmn-moddle extension plugin.
  *
- * Example use:
+ * @param {Object} descriptor
  *
- *    var registerBpmnJSModdleExtension = require('./camundaModelerPluginHelpers').registerBpmnJSModdleExtension;
- *    var module = require('./index');
+ * @example
+ * import {
+ *   registerBpmnJSModdleExtension
+ * } from 'camunda-modeler-plugin-helpers';
  *
- *    registerBpmnJSModdleExtension(module);
+ * var moddleDescriptor = {
+ *   name: 'my descriptor',
+ *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
+ *   prefix: 'mydesc',
  *
- * @param {Object} plugin
+ *   ...
+ * };
+ *
+ * registerBpmnJSModdleExtension(moddleDescriptor);
  */
-function registerBpmnJSModdleExtension(plugin) {
-  registerClientPlugin(plugin, 'bpmn.modeler.moddleExtension');
+export function registerBpmnJSModdleExtension(descriptor) {
+  registerClientPlugin(descriptor, 'bpmn.modeler.moddleExtension');
 }
-
-module.exports.registerBpmnJSModdleExtension = registerBpmnJSModdleExtension;
