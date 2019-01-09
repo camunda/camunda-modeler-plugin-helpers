@@ -9,19 +9,34 @@ Helper functions for bundling your Camunda Modeler client plugins.
 Register plugin to be passed as additional module:
 
 ```javascript
-var registerBpmnJSPlugin = require('camunda-modeler-plugin-helpers').registerBpmnJSPlugin;
-var module = require('./index');
+import {
+  registerBpmnJSPlugin
+} from 'camunda-modeler-plugin-helpers';
 
-registerBpmnJSPlugin(module);
+const BpmnJSModule = {
+  __init__: [ 'myService' ],
+  myService: [ 'type', ... ]
+};
+
+registerBpmnJSPlugin(BpmnJSModule);
 ```
 
-Register plugin to be passed as moddle extension:
+Register a custom [moddle extension](https://github.com/bpmn-io/bpmn-moddle):
 
 ```javascript
-var registerBpmnJSModdleExtension = require('camunda-modeler-plugin-helpers').registerBpmnJSModdleExtension;
-var module = require('./index');
+import {
+  registerBpmnJSModdleExtension
+} from 'camunda-modeler-plugin-helpers';
 
-registerBpmnJSModdleExtension(module);
+var moddleDescriptor = {
+  name: 'my descriptor',
+  uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
+  prefix: 'mydesc',
+
+  ...
+};
+
+registerBpmnJSModdleExtension(moddleDescriptor);
 ```
 
 ## License
