@@ -45,6 +45,19 @@ var moddleDescriptor = {
 registerBpmnJSModdleExtension(moddleDescriptor);
 ```
 
+
+### General
+
+```javascript
+import {
+  getModelerDirectory,
+  getPluginsDirectory
+} from 'camunda-modeler-plugin-helpers';
+
+...
+```
+
+
 ## License
 
 MIT
