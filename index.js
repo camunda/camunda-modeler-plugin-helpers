@@ -67,21 +67,3 @@ export function registerBpmnJSPlugin(module) {
 export function registerBpmnJSModdleExtension(descriptor) {
   registerClientPlugin(descriptor, 'bpmn.modeler.moddleExtension');
 }
-
-/**
- * Return the modeler directory, as a string.
- *
- * @return {String}
- */
-export function getModelerDirectory() {
-  return window.getModelerDirectory();
-}
-
-/**
- * Return the modeler plugin directory, as a string.
- *
- * @return {String}
- */
-export function getPluginsDirectory() {
-  return window.getPluginsDirectory();
-}

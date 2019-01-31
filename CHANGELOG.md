@@ -6,6 +6,18 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/bpmn-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.1.0
+
+_Exposed helpers `getPluginsDirectory` and `getModelerDirectory` got removed from the Camunda Modeler (`v3.0.0`)._
+
+* `CHORE`: remove `getPluginsDirectory`
+* `CHORE`: remove `getModelerDirectory`
+
+### Breaking Change
+
+* The directory helpers were published by accident and got removed without replacement. Use `app-plugins://{plugin-name}/{path-to-resource}` to reference resources shipped with a plug-in.
+
+
 ## 1.0.0
 
 * `FEAT`: expose `getPluginsDirectory` util
