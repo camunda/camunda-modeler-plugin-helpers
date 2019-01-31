@@ -71,6 +71,8 @@ export function registerBpmnJSModdleExtension(descriptor) {
 /**
  * Return the modeler directory, as a string.
  *
+ * @deprecated Will be removed in future Camunda Modeler versions without replacement.
+ *
  * @return {String}
  */
 export function getModelerDirectory() {
@@ -79,6 +81,8 @@ export function getModelerDirectory() {
 
 /**
  * Return the modeler plugin directory, as a string.
+ *
+ * @deprecated Will be removed in future Camunda Modeler versions without replacement.
  *
  * @return {String}
  */
