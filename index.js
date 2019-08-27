@@ -69,6 +69,30 @@ export function registerBpmnJSModdleExtension(descriptor) {
 }
 
 /**
+ * Register app extension which can provide UI elements.
+ *
+ * @param {import('react').ComponentType} extension
+ * @param {object} [props]
+ */
+export function registerAppExtension(extension, props) {
+  registerClientPlugin({ component: extension, props }, 'app.ui');
+}
+
+/**
+ * Fill component.
+ *
+ * @type {import('react').ComponentType<{ group: string, name: string }>}
+ */
+export const Fill = window.components.Fill;
+
+/**
+ * Modal component.
+ *
+ * @type {import('react').ComponentType<{ onClose: Function }>}
+ */
+export const Modal = window.components.Modal;
+
+/**
  * Return the modeler directory, as a string.
  *
  * @deprecated Will be removed in future Camunda Modeler versions without replacement.
