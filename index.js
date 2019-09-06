@@ -23,6 +23,21 @@ export function registerClientPlugin(plugin, type) {
 }
 
 /**
+ * Validate and register a client plugin.
+ *
+ * @param {import('react').ComponentType} extension
+ *
+ * @example
+ *
+ * import MyExtensionComponent from './MyExtensionComponent';
+ *
+ * registerClientExtension(MyExtensionComponent);
+ */
+export function registerClientExtension(component) {
+  registerClientPlugin(component, 'client');
+}
+
+/**
  * Validate and register a bpmn-js plugin.
  *
  * @param {Object} module
@@ -66,16 +81,6 @@ export function registerBpmnJSPlugin(module) {
  */
 export function registerBpmnJSModdleExtension(descriptor) {
   registerClientPlugin(descriptor, 'bpmn.modeler.moddleExtension');
-}
-
-/**
- * Register app extension which can provide UI elements.
- *
- * @param {import('react').ComponentType} extension
- * @param {object} [props]
- */
-export function registerAppExtension(extension, props) {
-  registerClientPlugin({ component: extension, props }, 'app.ui');
 }
 
 /**
