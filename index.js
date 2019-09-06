@@ -79,20 +79,6 @@ export function registerAppExtension(extension, props) {
 }
 
 /**
- * Fill component.
- *
- * @type {import('react').ComponentType<{ group: string, name: string }>}
- */
-export const Fill = window.components.Fill;
-
-/**
- * Modal component.
- *
- * @type {import('react').ComponentType<{ onClose: Function }>}
- */
-export const Modal = window.components.Modal;
-
-/**
  * Return the modeler directory, as a string.
  *
  * @deprecated Will be removed in future Camunda Modeler versions without replacement.
