@@ -1,3 +1,7 @@
+if (!window.components) {
+  throw new Error('Not compatible with Camunda Modeler < 3.4');
+}
+
 /**
  * Fill component.
  *
