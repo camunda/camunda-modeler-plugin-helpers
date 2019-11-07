@@ -6,6 +6,10 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/bpmn-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.4.0
+
+* `FEAT`: expose client extension point
+
 ## 3.1.0
 
 * `CHORE`: deprecate directory utils
