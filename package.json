@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/camunda/camunda-modeler-plugin-helpers/issues"
   },
-  "homepage": "https://github.com/camunda/camunda-modeler-plugin-helpers#readme"
+  "homepage": "https://github.com/camunda/camunda-modeler-plugin-helpers#readme",
+  "dependencies": {
+    "min-dash": "^3.5.2"
+  }
 }
