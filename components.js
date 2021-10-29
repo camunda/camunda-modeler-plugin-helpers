@@ -53,3 +53,75 @@ export const Fill = window.components.Fill;
  * }
  */
 export const Modal = window.components.Modal;
+
+/**
+ * Overlay component.
+ *
+ * @type {import('react').ComponentType<{ onClose: Function, anchor: Node, offset?: { bottom?: number, left?: number, right?: number } }>}
+ *
+ * @example
+ * 
+ * import { Overlay } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomOverlay(props) {
+ *   return (
+ *    <Overlay onClose={ props.onClose } anchor={ props.btn_ref } offset={ props.anchor }>
+ *      <Overlay.Title>
+ *        Custom Modal
+ *      </Overlay.Title>
+ *      <Overlay.Body>
+ *        Hello world!
+ *      </Overlay.Body>
+ *      <Overlay.Footer>
+ *        <button type="button" onClick={ props.onClose }>
+ *          Close
+ *        </button>
+ *      </Overlay.Footer>
+ *    </Overlay>
+ *   );
+ * }
+ */
+
+ export const Overlay = function(...args) {
+  if (!window.components.Overlay) {
+    throw new Error('Not compatible with Camunda Modeler < 4.12');
+  } 
+    
+  return window.components.Overlay(...args);
+}
+
+ /**
+ * ToggleSwitch component.
+ *
+ * @type {import('react').ComponentType<{ id: string, name: string, label?: string, switcherLabel?: string, description?: string }>}
+ *
+ * @example
+ * 
+ * import { ToggleSwitch } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomToggle(props) {
+ *   return (
+ *    <Formik initialValues={ initialValues } onSubmit={ this.onSubmit }>
+ *      {() => (
+ *        <Form>
+ *          <Field
+ *            component={ ToggleSwitch }
+ *            switcherLabel="Switcher label"
+ *            id={ id }
+ *            name={ name }
+ *            description="Toggle description"
+ *          />
+ *        </Form>
+ *       )}
+ *    </Formik>
+ *   );
+ * }
+ */
+
+export const ToggleSwitch = function(...args) {
+  if (!window.components.ToggleSwitch) {
+    throw new Error('Not compatible with Camunda Modeler < 4.12');
+  } 
+    
+  return window.components.ToggleSwitch(...args);
+}
