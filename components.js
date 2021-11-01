@@ -1,6 +1,16 @@
 if (!window.components) {
-  throw new Error('Not compatible with Camunda Modeler < 3.4');
+  throw notCompatible('3.4');
 }
+
+function notCompatible(requiredVersion) {
+  return new Error('Not compatible with Camunda Modeler < v' + requiredVersion);
+}
+
+export const NotCompatible = function(requiredVersion) {
+  return function NotCompatibleComponent() {
+    throw notCompatible(requiredVersion);
+  };
+};
 
 /**
  * Fill component. Set `slot` to "toolbar" to include in the top toolbar.
@@ -81,14 +91,7 @@ export const Modal = window.components.Modal;
  *   );
  * }
  */
-
- export const Overlay = function(...args) {
-  if (!window.components.Overlay) {
-    throw new Error('Not compatible with Camunda Modeler < 4.12');
-  } 
-    
-  return window.components.Overlay(...args);
-}
+ export const Overlay = window.components.Overlay || NotCompatible('4.12');
 
  /**
  * ToggleSwitch component.
@@ -117,11 +120,4 @@ export const Modal = window.components.Modal;
  *   );
  * }
  */
-
-export const ToggleSwitch = function(...args) {
-  if (!window.components.ToggleSwitch) {
-    throw new Error('Not compatible with Camunda Modeler < 4.12');
-  } 
-    
-  return window.components.ToggleSwitch(...args);
-}
+export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('4.12');
