@@ -1,6 +1,16 @@
 if (!window.components) {
-  throw new Error('Not compatible with Camunda Modeler < 3.4');
+  throw notCompatible('3.4');
 }
+
+function notCompatible(requiredVersion) {
+  return new Error('Not compatible with Camunda Modeler < v' + requiredVersion);
+}
+
+export const NotCompatible = function(requiredVersion) {
+  return function NotCompatibleComponent() {
+    throw notCompatible(requiredVersion);
+  };
+};
 
 /**
  * Fill component. Set `slot` to "toolbar" to include in the top toolbar.
@@ -53,3 +63,61 @@ export const Fill = window.components.Fill;
  * }
  */
 export const Modal = window.components.Modal;
+
+/**
+ * Overlay component.
+ *
+ * @type {import('react').ComponentType<{ onClose: Function, anchor: Node, offset?: { bottom?: number, left?: number, right?: number } }>}
+ *
+ * @example
+ * 
+ * import { Overlay } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomOverlay(props) {
+ *   return (
+ *    <Overlay onClose={ props.onClose } anchor={ props.btn_ref } offset={ props.anchor }>
+ *      <Overlay.Title>
+ *        Custom Modal
+ *      </Overlay.Title>
+ *      <Overlay.Body>
+ *        Hello world!
+ *      </Overlay.Body>
+ *      <Overlay.Footer>
+ *        <button type="button" onClick={ props.onClose }>
+ *          Close
+ *        </button>
+ *      </Overlay.Footer>
+ *    </Overlay>
+ *   );
+ * }
+ */
+ export const Overlay = window.components.Overlay || NotCompatible('4.12');
+
+ /**
+ * ToggleSwitch component.
+ *
+ * @type {import('react').ComponentType<{ id: string, name: string, label?: string, switcherLabel?: string, description?: string }>}
+ *
+ * @example
+ * 
+ * import { ToggleSwitch } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomToggle(props) {
+ *   return (
+ *    <Formik initialValues={ initialValues } onSubmit={ this.onSubmit }>
+ *      {() => (
+ *        <Form>
+ *          <Field
+ *            component={ ToggleSwitch }
+ *            switcherLabel="Switcher label"
+ *            id={ id }
+ *            name={ name }
+ *            description="Toggle description"
+ *          />
+ *        </Form>
+ *       )}
+ *    </Formik>
+ *   );
+ * }
+ */
+export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('4.12');
