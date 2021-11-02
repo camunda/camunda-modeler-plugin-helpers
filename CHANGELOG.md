@@ -6,6 +6,10 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/bpmn-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 4.12.0
+
+* `FEAT`: export `Overlay` and `ToggleSwitch` components
+
 ## 3.4.0
 
 * `FEAT`: expose client extension point
