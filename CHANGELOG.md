@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to [camunda-modeler-plugin-helpers](https://github.com/bpmn-io/camunda-modeler-plugin-helpers) are documented here. We use [semantic versioning](http://semver.org/) for releases.
+All notable changes to [camunda-modeler-plugin-helpers](https://github.com/camunda/camunda-modeler-plugin-helpers) are documented here. We use [semantic versioning](http://semver.org/) for releases.
 
 ## Unreleased
 
