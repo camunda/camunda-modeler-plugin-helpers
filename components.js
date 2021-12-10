@@ -91,7 +91,7 @@ export const Modal = window.components.Modal;
  *   );
  * }
  */
- export const Overlay = window.components.Overlay || NotCompatible('4.12');
+ export const Overlay = window.components.Overlay || NotCompatible('5.0');
 
  /**
  * ToggleSwitch component.
@@ -120,4 +120,4 @@ export const Modal = window.components.Modal;
  *   );
  * }
  */
-export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('4.12');
+export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('5.0');
