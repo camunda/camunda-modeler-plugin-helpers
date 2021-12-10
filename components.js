@@ -67,7 +67,15 @@ export const Modal = window.components.Modal;
 /**
  * Overlay component.
  *
- * @type {import('react').ComponentType<{ onClose: Function, anchor: Node, offset?: { bottom?: number, left?: number, right?: number } }>}
+ * @type {import('react').ComponentType<{ 
+ *  onClose: Function, 
+ *  anchor: Node, 
+ *  offset?: { top?: number, bottom?: number, left?: number, right?: number }, 
+ *  maxWidth?: number | string,
+ *  maxHeight?: number | string,
+ *  minWidth?: number | string,
+ *  minHeight?: number | string
+ * }>}
  *
  * @example
  * 
