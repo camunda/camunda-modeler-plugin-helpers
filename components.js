@@ -94,6 +94,35 @@ export const Modal = window.components.Modal;
  export const Overlay = window.components.Overlay || NotCompatible('5.0');
 
  /**
+ * Section component.
+ *
+ * @type {import('react').ComponentType<{ maxHeight: Number | String, relativePos: Boolean } }>}
+ *
+ * @example
+ * 
+ * import { Section } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomSection(props) {
+ *   return (
+ *    <Section maxHeight="240px">
+ *     <Section.Header>
+ *       Custom section
+ *     </Section.Header>
+ *     <Section.Body>
+ *       Hello world!
+ *     </Section.Body>
+ *     <Section.Actions>
+ *      <button type="button" onClick={ props.onClose }>
+ *        Close
+ *      </button>
+ *     </Section.Actions>
+ *    </Section>
+ *   );
+ * }
+ */
+export const Section = window.components.Section || NotCompatible('5.0');
+
+ /**
  * ToggleSwitch component.
  *
  * @type {import('react').ComponentType<{ id: string, name: string, label?: string, switcherLabel?: string, description?: string }>}
