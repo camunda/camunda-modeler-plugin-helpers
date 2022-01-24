@@ -10,8 +10,8 @@ ___Note:__ Yet to be released changes appear here._
 
 * `CHORE`: set correct version for `ToggleSwitch` and `Overlay` ([a68e4f](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/a68e4f6d7f8c2855f869aa78132d1bc0446d1053))
 * `FEAT`: export `Section` component ([45c5d2](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/45c5d2478579c5aa8b00c89f9e1377f59348901b))
-* `DOCS`: add docs for `Overlay` ([05b3cbf](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/05b3cbf4e15c6603d0e231e75818a99f5b429834))
 * `FEAT`: expose vendor dependencies via `window.vendor` ([51430bd](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/51430bdf147fd894440ab33e829f0a9f136e302b) and [78dfe6](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/78dfe6b0f790c1bf1f7dbca0dae9d7daa3e82ad6))
+* `DOCS`: add docs for `Overlay` ([05b3cbf](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/05b3cbf4e15c6603d0e231e75818a99f5b429834))
 
 ## 4.12.0
 
