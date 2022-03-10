@@ -6,6 +6,10 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/camun
 
 ___Note:__ Yet to be released changes appear here._
 
+## 5.0.0-alpha.1
+
+* `FEAT`: add platform specific registration helpers for bpmn-js plugins ([4b0606f](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/4b0606fd2eae41600a6395224b3ca395a09614c6))
+
 ## 5.0.0-alpha.0
 
 * `CHORE`: set correct version for `ToggleSwitch` and `Overlay` ([a68e4f](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/a68e4f6d7f8c2855f869aa78132d1bc0446d1053))
