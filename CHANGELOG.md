@@ -6,6 +6,10 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/camun
 
 ___Note:__ Yet to be released changes appear here._
 
+## 5.1.0
+
+* `FEAT`: add cloud and platform specific registration helpers for dmn-js plugins ([#23](https://github.com/camunda/camunda-modeler-plugin-helpers/issues/23))
+
 ## 5.0.0
 
 * `FEAT`: add platform specific registration helpers for bpmn-js plugins ([4b0606f](https://github.com/camunda/camunda-modeler-plugin-helpers/commit/4b0606fd2eae41600a6395224b3ca395a09614c6))
