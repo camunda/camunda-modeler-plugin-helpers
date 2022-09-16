@@ -46,6 +46,15 @@ registerBpmnJSModdleExtension(moddleDescriptor);
 ```
 
 
+```javascript
+import {
+  requireModelerVersion
+} from 'camunda-modeler-plugin-helpers';
+
+requireModelerVersion('< 5.3')
+```
+
+
 ## License
 
 MIT
