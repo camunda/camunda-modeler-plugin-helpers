@@ -48,10 +48,18 @@ registerBpmnJSModdleExtension(moddleDescriptor);
 
 ```javascript
 import {
-  requireModelerVersion
+  withModeler,
+  registerBpmnJSPlugin
 } from 'camunda-modeler-plugin-helpers';
 
-requireModelerVersion('< 5.3')
+withModeler(
+  '< 5.3', 
+  () => {
+    registerBpmnJSPLugin(BpmnJSModule)
+  },
+  'camunda-modeler-linter-plugin is not supported'
+);
+
 ```
 
 
