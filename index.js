@@ -1,3 +1,5 @@
+import semverCompare from 'semver-compare';
+
 /**
  * Validate and register a client plugin.
  *
@@ -351,4 +353,56 @@ export function getModelerDirectory() {
  */
 export function getPluginsDirectory() {
   return window.getPluginsDirectory();
+}
+
+/**
+ * Get Camunda Modeler app version.
+ *
+ * @returns {String|null}
+ */
+export function getAppVersion() {
+  const {
+    appVersion = null
+  } = window;
+
+  return appVersion;
+}
+
+/**
+ * Expect the specified Camunda Modeler version. Throw an error otherwise.
+ *
+ * @param {Function} callback
+ * @param {String|Object} appVersion
+ * @param {String} [message]
+ */
+export function expectAppVersion(callback, appVersion, message = 'Plugin not compatible with Camunda Modeler {{ appVersion }}') {
+  let minAppVersion = appVersion,
+      maxAppVersion = null;
+
+  if (isObject(appVersion)) {
+    const {
+      min = null,
+      max = null
+    } = appVersion;
+
+    minAppVersion = min;
+    maxAppVersion = max;
+  }
+
+  const appVersion = getAppVersion();
+
+  if (appVersion && !isInRange(appVersion, minAppVersion, maxAppVersion)) {
+    throw new Error(
+      message
+        .replace('{{ appVersion }}', appVersion)
+        .replace('{{ minAppVersion }}', minAppVersion)
+        .replace('{{ maxAppVersion }}', maxAppVersion)
+    );
+  }
+
+  callback();
+}
+
+function isInRange(version, minVersion, maxVersion) {
+  return semverCompare(version, minVersion) !== -1 && semverCompare(maxVersion, version) !== -1;
 }
