@@ -158,3 +158,99 @@ export const Section = window.components.Section || NotCompatible('5.0');
  * }
  */
 export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('5.0');
+
+ /**
+ * TextInput component.
+ *
+ * @type {import('react').ComponentType<{ hint: string, label: string, fieldError: string, multiline: boolean, description: string }>}
+ *
+ * @example
+ * 
+ * import { ToggleSwitch } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomToggle(props) {
+ *   return (
+ *    <Formik initialValues={ initialValues } onSubmit={ this.onSubmit }>
+ *      {() => (
+ *        <Form>
+ *          <Field
+ *            component={ ToggleSwitch }
+ *            switcherLabel="Switcher label"
+ *            id={ id }
+ *            name={ name }
+ *            description="Toggle description"
+ *          />
+ *        </Form>
+ *       )}
+ *    </Formik>
+ *   );
+ * }
+ */
+export const TextInput = window.components.TextInput || NotCompatible('5.29');
+
+ /**
+ * CachedComponent class.
+ *
+ * @type {import('react').ComponentClass}
+ *
+ * @example
+ * 
+ * import { CachedComponent } from 'camunda-modeler-plugin-helpers/components';
+ * 
+ * class ComponentWithCachedStated extends CachedComponent {
+ *  constructor(props) {
+ *   super(props);
+ *  }
+ * 
+ *  getCachedState() {
+ *    return this.getCached()
+ *  }
+ * 
+ *  setCachedState(values) {
+ *    this.setCached(values)
+ *  }
+ * }
+ * 
+ */
+export const CachedComponent = window.components.CachedComponent || NotCompatible('5.29');
+
+/**
+ * A higher order component that passes cache to a wrapped component.
+ * Forwards refs, too.
+ * 
+ * @type {Function}
+ * @param {Component} Comp
+ */
+export const WithCache = window.components.WithCache || NotCompatible('5.29');
+
+/**
+ * A higher order component that lazily
+ * initiates the given wrapped component
+ * via the `Comp#createCachedState` method.
+ *
+ * Passes props as well as destructured
+ * wrapped component state to `Comp`.
+ *
+ * The resulting component must be called
+ * with the `id` and `cache` prop.
+ *
+ * Forwards refs, too.
+ *
+ * @type {Function}
+ * @param {Component} Comp
+ */
+export const WithCachedState = window.components.WithCachedState || NotCompatible('5.29');
+
+/**
+ * A helper function to create Tab components
+ * to be used with the TabProvider.
+ *
+ * @type {Function}
+ * @param {string} tabName - The name of the tab.
+ * @param {object} providers - The providers object.
+ *   @property {string} providers.type - The type of the provider.
+ *   @property {React.Component} providers.editor - The editor component.
+ *   @property {string} providers.defaultName - The default name of the provider.
+ * @returns {React.Component} The created EditorTab component.
+ */
+export const createTab = window.components.createTab || NotCompatible('5.29');
