@@ -162,23 +162,24 @@ export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('5.0
  /**
  * TextInput component.
  *
- * @type {import('react').ComponentType<{ hint: string, label: string, fieldError: string, multiline: boolean, description: string }>}
+ * @type {import('react').ComponentType<{ hint: string, name: string, label: string, fieldError: string, multiline: boolean, description: string }>}
  *
  * @example
  * 
- * import { ToggleSwitch } from 'camunda-modeler-plugin-helpers/components';
+ * import { TextInput } from 'camunda-modeler-plugin-helpers/components';
  *
- * function CustomToggle(props) {
+ * function CustomInput(props) {
  *   return (
  *    <Formik initialValues={ initialValues } onSubmit={ this.onSubmit }>
  *      {() => (
  *        <Form>
  *          <Field
- *            component={ ToggleSwitch }
- *            switcherLabel="Switcher label"
+ *            component={ TextInput }
+ *            label="My input"
  *            id={ id }
+ *.           multiline={false}
  *            name={ name }
- *            description="Toggle description"
+ *            description="Custom description"
  *          />
  *        </Form>
  *       )}
@@ -248,9 +249,9 @@ export const WithCachedState = window.components.WithCachedState || NotCompatibl
  * @type {Function}
  * @param {string} tabName - The name of the tab.
  * @param {object} providers - The providers object.
- *   @property {string} providers.type - The type of the provider.
- *   @property {React.Component} providers.editor - The editor component.
- *   @property {string} providers.defaultName - The default name of the provider.
+ * @param {string} providers.type - The type of the provider.
+ * @param {React.Component} providers.editor - The editor component.
+ * @param {string} providers.defaultName - The default name of the provider.
  * @returns {React.Component} The created EditorTab component.
  */
 export const createTab = window.components.createTab || NotCompatible('5.29');
