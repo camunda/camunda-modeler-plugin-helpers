@@ -177,7 +177,7 @@ export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('5.0
  *            component={ TextInput }
  *            label="My input"
  *            id={ id }
- *.           multiline={false}
+ *            multiline={ false }
  *            name={ name }
  *            description="Custom description"
  *          />
@@ -198,7 +198,7 @@ export const TextInput = window.components.TextInput || NotCompatible('5.29');
  * 
  * import { CachedComponent } from 'camunda-modeler-plugin-helpers/components';
  * 
- * class ComponentWithCachedStated extends CachedComponent {
+ * class ComponentWithCachedState extends CachedComponent {
  *  constructor(props) {
  *   super(props);
  *  }
