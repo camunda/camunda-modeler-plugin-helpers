@@ -17,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/camunda/camunda-modeler-plugin-helpers/issues"
   },
-  "homepage": "https://github.com/camunda/camunda-modeler-plugin-helpers#readme"
+  "homepage": "https://github.com/camunda/camunda-modeler-plugin-helpers#readme",
+  "devDependencies": {
+    "eslint": "^9.21.0",
+    "eslint-plugin-bpmn-io": "^2.2.0"
+  },
+  "files": [
+    "vendor",
+    "components.js",
+    "helper.js",
+    "index.js",
+    "react.js"
+  ]
 }
