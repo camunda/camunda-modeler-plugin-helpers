@@ -7,4 +7,4 @@ if (!window.react) {
  *
  * @type {import('react')}
  */
-module.exports = window.react;
+export default window.react;
