@@ -1,4 +1,4 @@
-module.exports.returnOrThrow = function(getter, minimalModelerVersion) {
+export function returnOrThrow(getter, minimalModelerVersion) {
   let result;
   try {
     result = getter();

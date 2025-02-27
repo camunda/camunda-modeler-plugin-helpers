@@ -1,3 +1,3 @@
-const { returnOrThrow } = require('../../../../helper');
+import { returnOrThrow } from '../../../../helper.js';
 
-module.exports = returnOrThrow(() => window.vendor.propertiesPanel.preact.jsxRuntime, '5.0.0');
+export default returnOrThrow(() => window.vendor.propertiesPanel.preact.jsxRuntime, '5.0.0');
