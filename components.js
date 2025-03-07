@@ -67,10 +67,10 @@ export const Modal = window.components.Modal;
 /**
  * Overlay component.
  *
- * @type {import('react').ComponentType<{ 
- *  onClose: Function, 
- *  anchor: Node, 
- *  offset?: { top?: number, bottom?: number, left?: number, right?: number }, 
+ * @type {import('react').ComponentType<{
+ *  onClose: Function,
+ *  anchor: Node,
+ *  offset?: { top?: number, bottom?: number, left?: number, right?: number },
  *  maxWidth?: number | string,
  *  maxHeight?: number | string,
  *  minWidth?: number | string,
@@ -78,7 +78,7 @@ export const Modal = window.components.Modal;
  * }>}
  *
  * @example
- * 
+ *
  * import { Overlay } from 'camunda-modeler-plugin-helpers/components';
  *
  * function CustomOverlay(props) {
@@ -99,15 +99,15 @@ export const Modal = window.components.Modal;
  *   );
  * }
  */
- export const Overlay = window.components.Overlay || NotCompatible('5.0');
+export const Overlay = window.components.Overlay || NotCompatible('5.0');
 
- /**
+/**
  * Section component.
  *
  * @type {import('react').ComponentType<{ maxHeight: Number | String, relativePos: Boolean } }>}
  *
  * @example
- * 
+ *
  * import { Section } from 'camunda-modeler-plugin-helpers/components';
  *
  * function CustomSection(props) {
@@ -130,13 +130,13 @@ export const Modal = window.components.Modal;
  */
 export const Section = window.components.Section || NotCompatible('5.0');
 
- /**
+/**
  * ToggleSwitch component.
  *
  * @type {import('react').ComponentType<{ id: string, name: string, label?: string, switcherLabel?: string, description?: string }>}
  *
  * @example
- * 
+ *
  * import { ToggleSwitch } from 'camunda-modeler-plugin-helpers/components';
  *
  * function CustomToggle(props) {
@@ -159,13 +159,13 @@ export const Section = window.components.Section || NotCompatible('5.0');
  */
 export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('5.0');
 
- /**
+/**
  * TextInput component.
  *
  * @type {import('react').ComponentType<{ hint: string, name: string, label: string, fieldError: string, multiline: boolean, description: string }>}
  *
  * @example
- * 
+ *
  * import { TextInput } from 'camunda-modeler-plugin-helpers/components';
  *
  * function CustomInput(props) {
@@ -189,36 +189,36 @@ export const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('5.0
  */
 export const TextInput = window.components.TextInput || NotCompatible('5.29');
 
- /**
+/**
  * CachedComponent class.
  *
  * @type {import('react').ComponentClass}
  *
  * @example
- * 
+ *
  * import { CachedComponent } from 'camunda-modeler-plugin-helpers/components';
- * 
+ *
  * class ComponentWithCachedState extends CachedComponent {
  *  constructor(props) {
  *   super(props);
  *  }
- * 
+ *
  *  getCachedState() {
  *    return this.getCached()
  *  }
- * 
+ *
  *  setCachedState(values) {
  *    this.setCached(values)
  *  }
  * }
- * 
+ *
  */
 export const CachedComponent = window.components.CachedComponent || NotCompatible('5.29');
 
 /**
  * A higher order component that passes cache to a wrapped component.
  * Forwards refs, too.
- * 
+ *
  * @type {Function}
  * @param {Component} Comp
  */
