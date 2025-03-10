@@ -1,14 +1,25 @@
-> As of version `3.0.0` this library exposes [ES modules](http://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules). Use an ES module aware bundler such as [Webpack](https://webpack.js.org) or [Rollup](https://rollupjs.org) to bundle it for the browser.
-
-
 # Camunda Modeler Plugin Helpers :electric_plug:
 
 [![Compatible with Camunda Modeler version 2.2](https://img.shields.io/badge/Camunda%20Modeler-2.2+-blue.svg)](https://github.com/camunda/camunda-modeler)
 
+Helper functions and core utility exports for bundling your Camunda Modeler client plugins.
 
-Helper functions for bundling your Camunda Modeler client plugins.
+> [!WARNING]
+> This library re-exposes core utilities that you want to use as you develop plug-ins for the [Camunda Modeler](https://github.com/camunda/camunda-modeler).
+> If a plug-in uses any of the utilities, i.e. React, then it **must** consume them via the respective [helper export](#api). Use our [webpack plug-in](https://github.com/camunda/camunda-modeler-webpack-plugin) to accomplish that automatically, or use a source mod / configure your plug-in bundler accordingly.
 
-## How to use
+
+## Usage
+
+Install the plug-in:
+
+```
+npm install camunda-modeler-plugin-helpers
+```
+
+Use any of the [exposed utilities](#api).
+
+## API
 
 ### bpmn-js
 
@@ -44,6 +55,21 @@ var moddleDescriptor = {
 
 registerBpmnJSModdleExtension(moddleDescriptor);
 ```
+
+
+### React
+
+> [!NOTE]
+> Should be used in place of `react` imports.
+
+```javascript
+import React, { useEffect } from 'camunda-modeler-plugin-helpers/vendor/react.js';
+```
+
+
+## Additional Resources
+
+* [camunda-modeler-webpack-plugin](https://github.com/camunda/camunda-modeler-webpack-plugin) - Bundle your libraries for use within the [Camunda Modeler](https://github.com/camunda/camunda-modeler)
 
 
 ## License
