@@ -1,3 +1,8 @@
-import react from '../react.js';
+import { returnOrThrow } from '../helper.js';
 
-export default react;
+/**
+ * React object used by Camunda Modeler. Use it to create UI extension.
+ *
+ * @type {import('react')}
+ */
+export default returnOrThrow(() => window.react, '3.4');
