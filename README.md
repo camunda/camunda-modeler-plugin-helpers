@@ -55,8 +55,8 @@ var moddleDescriptor = {
 
 registerBpmnJSModdleExtension(moddleDescriptor);
 ```
-
-[![Compatible with Camunda Modeler version 5.29+](https://img.shields.io/badge/Camunda%20Modeler-5.29+-blue.svg)](https://github.com/camunda/camunda-modeler)
+> [!NOTE]
+> This feature requires **Camunda Modeler 5.29+**.
 
 ## UI Components
 These components are available for use:
@@ -72,15 +72,11 @@ These components are available for use:
 Components exported for use in Camunda Modeler client plugins.
 
 ```javascript
-import { Fill } from 'camunda-modeler-plugin-helpers/components';
-    <Fill slot="status-bar__app" group="1_first">
-      <button
-        className="btn"
-        type="button"
-        onClick={ () => setModalOpen(true) }
-      >
-        Test 
-      </button>
+import Fill from 'camunda-modeler-plugin-helpers/components/Fill.js';
+
+  function MyReactExtension() {
+    return <Fill ... />
+};
 ```
 
 ## Higher-Order Function Helpers
@@ -99,54 +95,12 @@ These higher-order components (HOCs) enhance functionality:
 
 ## Properties Panel
 
-The following packages are exposed and can be used with `CamundaModelerWebpackPlugin` to configure bundling for the client:
-
-In your webpack configuration, set aliases:
-
-```javascript
-// webpack.config.js
-  plugins: [
-    new CamundaModelerWebpackPlugin({
-      type: '@bpmn-io/properties-panel'
-    }),
-    new CamundaModelerWebpackPlugin({
-      type: 'bpmn-js-properties-panel'
-    }),
-    new CamundaModelerWebpackPlugin({
-      type: 'dmn-js-properties-panel'
-    })
-  ]
-```
-
-Then, in the source code of your extension, you can still import:
-
 ```js
-import { useService } from 'bpmn-js-properties-panel';
-import { useState } from '@bpmn-io/properties-panel/preact/hooks';
+import { useService } from 'camunda-modeler-plugin-helpers/vendor/bpmn-js-properties-panel';
+import { useState } from 'camunda-modeler-plugin-helpers/vendor/@bpmn-io/properties-panel/preact/hooks';
 ```
 
 ## Packages
-
-[![Compatible with Camunda Modeler version 5.33+](https://img.shields.io/badge/Camunda%20Modeler-5.33+-blue.svg)](https://github.com/camunda/camunda-modeler)
-
-The following packages are exposed and can be used with `CamundaModelerWebpackPlugin` to configure bundling for the client:
-
-```javascript
-// webpack.config.js
-  plugins: [
-    new CamundaModelerWebpackPlugin({
-      type: 'react'
-    }),
-    new CamundaModelerWebpackPlugin({
-      type: 'carbon-react'
-    })
-  ]
-```
-
-```javascript
-import React, { useEffect } from 'react';
-import { Button, Theme, IconButton, TextInput } from '@carbon/react';
-```
 
 ### React
 
@@ -155,6 +109,16 @@ import { Button, Theme, IconButton, TextInput } from '@carbon/react';
 
 ```javascript
 import React, { useEffect } from 'camunda-modeler-plugin-helpers/vendor/react.js';
+```
+
+### Carbon
+
+> [!NOTE]
+> This feature requires **Camunda Modeler 5.33+**.
+> Should be used in place of `@carbon/react` imports.
+
+```javascript
+import { Button, Theme, TextInput } from 'camunda-modeler-plugin-helpers/vendor/@carbon/react';
 ```
 
 
