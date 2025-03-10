@@ -3,7 +3,10 @@ import bpmnIoPlugin from 'eslint-plugin-bpmn-io';
 const files = {
   build: [
     '*.mjs',
-  ]
+  ],
+  test: [
+    'test/**/**/*.js'
+  ],
 };
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -21,4 +24,22 @@ export default [
       files: files.build
     };
   }),
+
+  // test
+  ...bpmnIoPlugin.configs.mocha.map(config => {
+    return {
+      ...config,
+      files: files.test
+    };
+  }),
+  {
+    languageOptions: {
+      globals: {
+        sinon: true,
+        require: true,
+        global: true
+      },
+    },
+    files: files.test
+  }
 ];

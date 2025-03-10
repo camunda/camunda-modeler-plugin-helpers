@@ -1,10 +1,3 @@
-if (!window.react) {
-  throw new Error('Not compatible with Camunda Modeler < 3.4');
-}
+console.error('Warning: This module is deprecated and will be removed in future versions.');
 
-/**
- * React object used by Camunda Modeler. Use it to create UI extension.
- *
- * @type {import('react')}
- */
-export default window.react;
+export { default } from './vendor/react.js';
