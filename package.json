@@ -31,7 +31,7 @@
   },
   "files": [
     "vendor",
-    "components.js",
+    "components",
     "helper.js",
     "index.js",
     "react.js"
