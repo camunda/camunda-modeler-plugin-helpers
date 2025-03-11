@@ -6,6 +6,12 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/camun
 
 ___Note:__ Yet to be released changes appear here._
 
+## 5.2.0
+
+* `FEAT`: export `TextInput`, `CachedComponent` and higher order components `WithCache` and `WithCachedState` ([#26](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/26))
+* `FEAT`: add helper function to create `createTab` component for tab provider ([#26](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/26))
+* `FEAT`: expose Carbon components, provided with Camunda Modeler v5.33+ ([#27](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/27))
+
 ## 5.1.0
 
 * `FEAT`: add cloud and platform specific registration helpers for dmn-js plugins ([#23](https://github.com/camunda/camunda-modeler-plugin-helpers/issues/23))

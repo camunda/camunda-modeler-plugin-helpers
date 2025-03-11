@@ -55,7 +55,52 @@ var moddleDescriptor = {
 
 registerBpmnJSModdleExtension(moddleDescriptor);
 ```
+> [!NOTE]
+> This feature requires **Camunda Modeler 5.29+**.
 
+## UI Components
+These components are available for use:
+
+- **Fill**
+- **Modal**
+- **Overlay** 
+- **Section**
+- **ToggleSwitch**
+- **TextInput**
+- **CachedComponent**
+
+Components exported for use in Camunda Modeler client plugins.
+
+```javascript
+import Fill from 'camunda-modeler-plugin-helpers/components/Fill.js';
+
+  function MyReactExtension() {
+    return <Fill ... />
+};
+```
+
+## Higher-Order Function Helpers
+These higher-order components (HOCs) enhance functionality:
+
+- **WithCache**  
+  *A higher-order component that passes cache to a wrapped component. Forwards refs, too.*
+
+- **WithCachedState**  
+  *A higher-order component that lazily initiates the given wrapped component.*
+
+## Helper Functions
+
+- **createTab**  
+  *A helper function to create Tab components to be used with the TabProvider via the `Comp#createCachedState` method.*
+
+## Properties Panel
+
+```js
+import { useService } from 'camunda-modeler-plugin-helpers/vendor/bpmn-js-properties-panel';
+import { useState } from 'camunda-modeler-plugin-helpers/vendor/@bpmn-io/properties-panel/preact/hooks';
+```
+
+## Packages
 
 ### React
 
@@ -64,6 +109,16 @@ registerBpmnJSModdleExtension(moddleDescriptor);
 
 ```javascript
 import React, { useEffect } from 'camunda-modeler-plugin-helpers/vendor/react.js';
+```
+
+### Carbon
+
+> [!NOTE]
+> This feature requires **Camunda Modeler 5.33+**.
+> Should be used in place of `@carbon/react` imports.
+
+```javascript
+import { Button, Theme, TextInput } from 'camunda-modeler-plugin-helpers/vendor/@carbon/react';
 ```
 
 
