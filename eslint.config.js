@@ -1,8 +1,8 @@
-import bpmnIoPlugin from 'eslint-plugin-bpmn-io';
+const bpmnIoPlugin = require('eslint-plugin-bpmn-io');
 
 const files = {
   build: [
-    '*.mjs',
+    '*.cjs',
   ],
   test: [
     'test/**/**/*.js'
@@ -10,7 +10,7 @@ const files = {
 };
 
 /** @type {import('eslint').Linter.Config[]} */
-export default [
+module.exports = [
   ...bpmnIoPlugin.configs.browser.map(config => {
     return {
       ...config,
@@ -18,13 +18,11 @@ export default [
     };
   }),
   ...bpmnIoPlugin.configs.node.map(config => {
-
     return {
       ...config,
       files: files.build
     };
   }),
-
   // test
   ...bpmnIoPlugin.configs.mocha.map(config => {
     return {

@@ -1,8 +1,8 @@
-import { returnOrThrow } from '../helper.js';
+const { returnOrThrow } = require('../helper.js');
 
 /**
  * React object used by Camunda Modeler. Use it to create UI extension.
  *
  * @type {import('react')}
  */
-export default returnOrThrow(() => window.react, '3.4');
+module.exports = returnOrThrow(() => window.react, '3.4');
