@@ -1,4 +1,4 @@
-export function returnOrThrow(getter, minimalModelerVersion) {
+function returnOrThrow(getter, minimalModelerVersion) {
   let result;
   try {
     result = getter();
@@ -10,3 +10,7 @@ export function returnOrThrow(getter, minimalModelerVersion) {
 
   return result;
 }
+
+module.exports = {
+  returnOrThrow
+};

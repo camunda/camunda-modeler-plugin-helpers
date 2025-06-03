@@ -1,3 +1,3 @@
-import { returnOrThrow } from '../helper.js';
+const { returnOrThrow } = require('../helper.js');
 
-export default returnOrThrow(() => window.vendor?.propertiesPanel?.dmn, '5.0.0');
+module.exports = returnOrThrow(() => window.vendor?.propertiesPanel?.dmn, '5.0.0');
