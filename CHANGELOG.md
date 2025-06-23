@@ -6,6 +6,18 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/camun
 
 ___Note:__ Yet to be released changes appear here._
 
+## 6.0.0
+
+* `FEAT`: consistently use `vendor` exports ([#31](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/31))
+* `FEAT`: expose components individually ([#31](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/31))
+* `FEAT`: fail early when using unavailable components ([#31](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/31))
+* `FEAT`: `carbon` and carbon `icons-react` exports are now available ([#31](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/31))
+
+### Breaking Changes
+
+* Dependency `react` is now exposed under `vendor`, consistent with other vendor exports ([#31](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/31))
+* Components previously exported from `components.js` are now exported as individual files ([#31](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/31))
+
 ## 5.1.0
 
 * `FEAT`: add cloud and platform specific registration helpers for dmn-js plugins ([#23](https://github.com/camunda/camunda-modeler-plugin-helpers/issues/23))
