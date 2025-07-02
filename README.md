@@ -56,6 +56,49 @@ var moddleDescriptor = {
 registerBpmnJSModdleExtension(moddleDescriptor);
 ```
 
+## UI Components
+> [!NOTE]
+> This feature requires **Camunda Modeler 5.29+**.
+
+These components are available for use:
+
+- **Fill**
+- **Modal**
+- **Overlay** 
+- **Section**
+- **ToggleSwitch**
+- **TextInput**
+- **CachedComponent**
+
+[Components](https://github.com/camunda/camunda-modeler-plugin-helpers/tree/main/components) exported for use in Camunda Modeler client plugins. 
+
+```javascript
+import Fill from 'camunda-modeler-plugin-helpers/components/Fill.js';
+
+  function MyReactExtension() {
+    return <Fill ... />
+};
+```
+
+## Higher-Order Function Helpers
+These higher-order components (HOCs) enhance functionality:
+
+- **[WithCache](https://github.com/camunda/camunda-modeler-plugin-helpers/blob/main/components/WithCache.js)** - pass cache and forward refs to a wrapped component.
+
+- **[WithCachedState](https://github.com/camunda/camunda-modeler-plugin-helpers/blob/main/components/WithCachedState.js)** - lazy-load a wrapped component.
+
+## Helper Functions
+
+**[createTab](https://github.com/camunda/camunda-modeler-plugin-helpers/blob/main/components/create-tab.js)** - helper function to create Tab components to be used with the TabProvider via the `Comp#createCachedState` method.
+
+## Properties Panel
+
+```js
+import { useService } from 'camunda-modeler-plugin-helpers/vendor/bpmn-js-properties-panel';
+import { useState } from 'camunda-modeler-plugin-helpers/vendor/@bpmn-io/properties-panel/preact/hooks';
+```
+
+## Packages
 
 ### React
 
@@ -64,6 +107,17 @@ registerBpmnJSModdleExtension(moddleDescriptor);
 
 ```javascript
 import React, { useEffect } from 'camunda-modeler-plugin-helpers/vendor/react.js';
+```
+
+### Carbon
+
+> [!NOTE]
+> This feature requires **Camunda Modeler 5.38+**.
+> Should be used in place of `@carbon/react` imports.
+
+```javascript
+import { Button, Theme, TextInput } from 'camunda-modeler-plugin-helpers/vendor/@carbon/react';
+import { Add } from 'camunda-modeler-plugin-helpers/vendor/@carbon/icons-react';;
 ```
 
 
