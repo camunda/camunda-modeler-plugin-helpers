@@ -56,11 +56,11 @@ var moddleDescriptor = {
 registerBpmnJSModdleExtension(moddleDescriptor);
 ```
 
-## UI Components
-> [!NOTE]
-> This feature requires **Camunda Modeler 5.29+**.
+### UI Components
 
-These components are available for use:
+[![Compatible with Camunda Modeler version 5.29+](https://img.shields.io/badge/Camunda%20Modeler-5.29+-blue.svg)](https://github.com/camunda/camunda-modeler)
+
+[Components](https://github.com/camunda/camunda-modeler-plugin-helpers/tree/main/components) exported for use in Camunda Modeler client plugins:
 
 - **Fill**
 - **Modal**
@@ -70,40 +70,38 @@ These components are available for use:
 - **TextInput**
 - **CachedComponent**
 
-[Components](https://github.com/camunda/camunda-modeler-plugin-helpers/tree/main/components) exported for use in Camunda Modeler client plugins. 
-
 ```javascript
 import Fill from 'camunda-modeler-plugin-helpers/components/Fill.js';
 
-  function MyReactExtension() {
-    return <Fill ... />
-};
+function MyReactExtension() {
+  return <Fill ... />;
+}
 ```
 
-## Higher-Order Function Helpers
+### Higher-Order Function Helpers
+
 These higher-order components (HOCs) enhance functionality:
 
 - **[WithCache](https://github.com/camunda/camunda-modeler-plugin-helpers/blob/main/components/WithCache.js)** - pass cache and forward refs to a wrapped component.
 
 - **[WithCachedState](https://github.com/camunda/camunda-modeler-plugin-helpers/blob/main/components/WithCachedState.js)** - lazy-load a wrapped component.
 
-## Helper Functions
+### Helper Functions
 
-**[createTab](https://github.com/camunda/camunda-modeler-plugin-helpers/blob/main/components/create-tab.js)** - helper function to create Tab components to be used with the TabProvider via the `Comp#createCachedState` method.
+* **[createTab](https://github.com/camunda/camunda-modeler-plugin-helpers/blob/main/components/create-tab.js)** - helper function to create Tab components to be used with the TabProvider via the `Comp#createCachedState` method.
 
-## Properties Panel
+### Properties Panel
+
+Should be used to access various properties panel exports:
 
 ```js
 import { useService } from 'camunda-modeler-plugin-helpers/vendor/bpmn-js-properties-panel';
 import { useState } from 'camunda-modeler-plugin-helpers/vendor/@bpmn-io/properties-panel/preact/hooks';
 ```
 
-## Packages
-
 ### React
 
-> [!NOTE]
-> Should be used in place of `react` imports.
+Should be used in place of `react` imports.
 
 ```javascript
 import React, { useEffect } from 'camunda-modeler-plugin-helpers/vendor/react.js';
@@ -111,15 +109,14 @@ import React, { useEffect } from 'camunda-modeler-plugin-helpers/vendor/react.js
 
 ### Carbon
 
-> [!NOTE]
-> This feature requires **Camunda Modeler 5.38+**.
-> Should be used in place of `@carbon/react` imports.
+[![Compatible with Camunda Modeler version 5.38+](https://img.shields.io/badge/Camunda%20Modeler-5.38+-blue.svg)](https://github.com/camunda/camunda-modeler)
+
+Should be used in place of `@carbon/react` imports:
 
 ```javascript
 import { Button, Theme, TextInput } from 'camunda-modeler-plugin-helpers/vendor/@carbon/react';
 import { Add } from 'camunda-modeler-plugin-helpers/vendor/@carbon/icons-react';;
 ```
-
 
 ## Additional Resources
 
