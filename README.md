@@ -115,7 +115,7 @@ Should be used in place of `@carbon/react` imports:
 
 ```javascript
 import { Button, Theme, TextInput } from 'camunda-modeler-plugin-helpers/vendor/@carbon/react';
-import { Add } from 'camunda-modeler-plugin-helpers/vendor/@carbon/icons-react';;
+import { Add } from 'camunda-modeler-plugin-helpers/vendor/@carbon/icons-react';
 ```
 
 ## Additional Resources
