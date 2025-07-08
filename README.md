@@ -95,8 +95,8 @@ These higher-order components (HOCs) enhance functionality:
 Should be used to access various properties panel exports:
 
 ```js
-import { useService } from 'camunda-modeler-plugin-helpers/vendor/bpmn-js-properties-panel';
-import { useState } from 'camunda-modeler-plugin-helpers/vendor/@bpmn-io/properties-panel/preact/hooks';
+import { useService } from 'camunda-modeler-plugin-helpers/vendor/bpmn-js-properties-panel.js';
+import { useState } from 'camunda-modeler-plugin-helpers/vendor/@bpmn-io/properties-panel/preact/hooks.js';
 ```
 
 ### React
@@ -114,8 +114,8 @@ import React, { useEffect } from 'camunda-modeler-plugin-helpers/vendor/react.js
 Should be used in place of `@carbon/react` imports:
 
 ```javascript
-import { Button, Theme, TextInput } from 'camunda-modeler-plugin-helpers/vendor/@carbon/react';
-import { Add } from 'camunda-modeler-plugin-helpers/vendor/@carbon/icons-react';
+import { Button, Theme, TextInput } from 'camunda-modeler-plugin-helpers/vendor/@carbon/react.js';
+import { Add } from 'camunda-modeler-plugin-helpers/vendor/@carbon/icons-react.js';
 ```
 
 ## Additional Resources
