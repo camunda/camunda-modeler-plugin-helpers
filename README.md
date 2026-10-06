@@ -107,17 +107,6 @@ Should be used in place of `react` imports.
 import React, { useEffect } from 'camunda-modeler-plugin-helpers/vendor/react.js';
 ```
 
-### Carbon
-
-[![Compatible with Camunda Modeler version 5.38+](https://img.shields.io/badge/Camunda%20Modeler-5.38+-blue.svg)](https://github.com/camunda/camunda-modeler)
-
-Should be used in place of `@carbon/react` imports:
-
-```javascript
-import { Button, Theme, TextInput } from 'camunda-modeler-plugin-helpers/vendor/@carbon/react.js';
-import { Add } from 'camunda-modeler-plugin-helpers/vendor/@carbon/icons-react.js';
-```
-
 ## Additional Resources
 
 * [camunda-modeler-webpack-plugin](https://github.com/camunda/camunda-modeler-webpack-plugin) - Bundle your libraries for use within the [Camunda Modeler](https://github.com/camunda/camunda-modeler)
