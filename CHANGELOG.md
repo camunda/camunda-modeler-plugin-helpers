@@ -6,6 +6,12 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/camun
 
 ___Note:__ Yet to be released changes appear here._
 
+* `FEAT`: remove `carbon` and carbon `icons-react` exports
+
+### Breaking Changes
+
+* `vendor/@carbon/react` and `vendor/@carbon/icons-react` are removed, Camunda Modeler no longer provides Carbon to plug-ins. Use the [UI components](https://github.com/camunda/camunda-modeler-plugin-helpers#ui-components) or the [Camunda Design System](https://github.com/camunda/design-system) instead.
+
 ## 6.0.0
 
 * `FEAT`: consistently use `vendor` exports ([#31](https://github.com/camunda/camunda-modeler-plugin-helpers/pull/31))
