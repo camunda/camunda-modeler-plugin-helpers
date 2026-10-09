@@ -6,7 +6,7 @@
   "scripts": {
     "all": "npm run lint && npm test",
     "lint": "eslint .",
-    "test": "mocha -r esm 'test/spec/**/*.spec.js'",
+    "test": "mocha 'test/spec/**/*.spec.js'",
     "dev": "npm run test -- --watch"
   },
   "repository": {
@@ -28,7 +28,6 @@
     "chai": "^6.3.0",
     "eslint": "^9.39.5",
     "eslint-plugin-bpmn-io": "^2.4.0",
-    "esm": "^3.2.25",
     "mocha": "^12.0.3"
   },
   "files": [
