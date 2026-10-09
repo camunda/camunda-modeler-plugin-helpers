@@ -2,7 +2,10 @@ function returnOrThrow(getter, minimalModelerVersion) {
   let result;
   try {
     result = getter();
-  } catch (error) {}
+  } catch {
+
+    // the Modeler does not provide the export
+  }
 
   if (!result) {
     throw new Error(`Not compatible with Camunda Modeler < ${minimalModelerVersion}`);
