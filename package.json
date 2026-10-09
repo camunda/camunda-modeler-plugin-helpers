@@ -4,6 +4,8 @@
   "description": "Helper functions for bundling your Camunda Modeler client plugins",
   "main": "index.js",
   "scripts": {
+    "all": "npm run lint && npm test",
+    "lint": "eslint .",
     "test": "mocha -r esm 'test/spec/**/*.spec.js'",
     "dev": "npm run test -- --watch"
   },
