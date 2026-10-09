@@ -1,4 +1,4 @@
-const bpmnIoPlugin = require('eslint-plugin-bpmn-io');
+import bpmnIoPlugin from 'eslint-plugin-bpmn-io';
 
 const files = {
   build: [
@@ -10,7 +10,7 @@ const files = {
 };
 
 /** @type {import('eslint').Linter.Config[]} */
-module.exports = [
+export default [
   ...bpmnIoPlugin.configs.browser.map(config => {
     return {
       ...config,
@@ -23,6 +23,18 @@ module.exports = [
       files: files.build
     };
   }),
+
+  // the helpers are CommonJS modules, bundled by the plug-in's webpack
+  {
+    ignores: [ ...files.build, ...files.test ],
+    languageOptions: {
+      globals: {
+        module: 'readonly',
+        require: 'readonly'
+      }
+    }
+  },
+
   // test
   ...bpmnIoPlugin.configs.mocha.map(config => {
     return {
@@ -35,6 +47,7 @@ module.exports = [
       globals: {
         sinon: true,
         require: true,
+        module: true,
         global: true
       },
     },
