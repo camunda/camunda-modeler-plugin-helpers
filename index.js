@@ -269,7 +269,7 @@ export function registerPlatformDmnJSModdleExtension(descriptor) {
 export function registerDmnJSPlugin(module, components) {
 
   if (!Array.isArray(components)) {
-    components = [ components ]
+    components = [ components ];
   }
 
   components.forEach(c => registerClientPlugin(module, `dmn.modeler.${c}.additionalModules`));
@@ -297,7 +297,7 @@ export function registerDmnJSPlugin(module, components) {
 export function registerCloudDmnJSPlugin(module, components) {
 
   if (!Array.isArray(components)) {
-    components = [ components ]
+    components = [ components ];
   }
 
   components.forEach(c => registerClientPlugin(module, `dmn.cloud.modeler.${c}.additionalModules`));
@@ -325,7 +325,7 @@ export function registerCloudDmnJSPlugin(module, components) {
 export function registerPlatformDmnJSPlugin(module, components) {
 
   if (!Array.isArray(components)) {
-    components = [ components ]
+    components = [ components ];
   }
 
   components.forEach(c => registerClientPlugin(module, `dmn.platform.modeler.${c}.additionalModules`));
