@@ -6,6 +6,7 @@ describe('vendor/react', function() {
   let React;
 
   beforeEach(async function() {
+
     // Mock global window.react
     mockWindowObject('react', {
       React: {
@@ -15,7 +16,7 @@ describe('vendor/react', function() {
     });
 
     // This will import the react module from the mocked window object
-    reactModule = await import('../../../vendor/react.js');
+    const reactModule = await import('../../../vendor/react.js');
     React = reactModule.default.React;
   });
 

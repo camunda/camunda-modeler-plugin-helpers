@@ -4,7 +4,9 @@
   "description": "Helper functions for bundling your Camunda Modeler client plugins",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r esm 'test/spec/**/*.spec.js'",
+    "all": "npm run lint && npm test",
+    "lint": "eslint .",
+    "test": "mocha 'test/spec/**/*.spec.js'",
     "dev": "npm run test -- --watch"
   },
   "repository": {
@@ -23,11 +25,10 @@
   },
   "homepage": "https://github.com/camunda/camunda-modeler-plugin-helpers#readme",
   "devDependencies": {
-    "chai": "^4.4.1",
-    "eslint": "^9.21.0",
-    "eslint-plugin-bpmn-io": "^2.2.0",
-    "esm": "^3.2.25",
-    "mocha": "^11.1.0"
+    "chai": "^6.3.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-bpmn-io": "^2.4.0",
+    "mocha": "^12.0.3"
   },
   "files": [
     "vendor",
