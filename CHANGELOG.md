@@ -6,6 +6,8 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/camun
 
 ___Note:__ Yet to be released changes appear here._
 
+## 7.0.0
+
 * `FEAT`: remove `carbon` and carbon `icons-react` exports
 
 ### Breaking Changes
