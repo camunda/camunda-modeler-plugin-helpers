@@ -1,6 +1,6 @@
 {
   "name": "camunda-modeler-plugin-helpers",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Helper functions for bundling your Camunda Modeler client plugins",
   "main": "index.js",
   "scripts": {
