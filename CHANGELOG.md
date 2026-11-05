@@ -6,6 +6,8 @@ All notable changes to [camunda-modeler-plugin-helpers](https://github.com/camun
 
 ___Note:__ Yet to be released changes appear here._
 
+* `FEAT`: add `registerFormJSPlugin` and the Camunda 8 / Camunda 7 specific `registerCloudFormJSPlugin` / `registerPlatformFormJSPlugin` to register form-js plug-ins ([camunda/camunda-modeler#5426](https://github.com/camunda/camunda-modeler/issues/5426))
+
 ## 7.0.0
 
 * `FEAT`: remove `carbon` and carbon `icons-react` exports
