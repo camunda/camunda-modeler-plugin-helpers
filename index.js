@@ -332,6 +332,87 @@ export function registerPlatformDmnJSPlugin(module, components) {
 }
 
 /**
+ * Validate and register a form-js plugin.
+ *
+ * The module is passed as additional module to the form editor and / or
+ * the form preview (viewer). A custom form field must be registered with both.
+ *
+ * @param {Object} module
+ * @param {'editor'|'viewer'|Array<'editor'|'viewer'>} [components=[ 'editor', 'viewer' ]]
+ *
+ * @example
+ *
+ * import {
+ *   registerFormJSPlugin
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * const FormJSModule = {
+ *   __init__: [ 'myService' ],
+ *   myService: [ 'type', ... ]
+ * };
+ *
+ * registerFormJSPlugin(FormJSModule);
+ * registerFormJSPlugin(FormJSModule, [ 'editor', 'viewer' ]);
+ * registerFormJSPlugin(FormJSModule, 'editor');
+ */
+export function registerFormJSPlugin(module, components) {
+  registerFormComponents(module, components, 'form.modeler');
+}
+
+/**
+ * Validate and register a Camunda 8 specific form-js plugin.
+ *
+ * @param {Object} module
+ * @param {'editor'|'viewer'|Array<'editor'|'viewer'>} [components=[ 'editor', 'viewer' ]]
+ *
+ * @example
+ *
+ * import {
+ *   registerCloudFormJSPlugin
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * registerCloudFormJSPlugin(FormJSModule);
+ * registerCloudFormJSPlugin(FormJSModule, 'editor');
+ */
+export function registerCloudFormJSPlugin(module, components) {
+  registerFormComponents(module, components, 'form.cloud.modeler');
+}
+
+/**
+ * Validate and register a Camunda 7 specific form-js plugin.
+ *
+ * @param {Object} module
+ * @param {'editor'|'viewer'|Array<'editor'|'viewer'>} [components=[ 'editor', 'viewer' ]]
+ *
+ * @example
+ *
+ * import {
+ *   registerPlatformFormJSPlugin
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * registerPlatformFormJSPlugin(FormJSModule);
+ * registerPlatformFormJSPlugin(FormJSModule, 'editor');
+ */
+export function registerPlatformFormJSPlugin(module, components) {
+  registerFormComponents(module, components, 'form.platform.modeler');
+}
+
+function registerFormComponents(module, components = [ 'editor', 'viewer' ], prefix) {
+
+  if (!Array.isArray(components)) {
+    components = [ components ];
+  }
+
+  components.forEach(c => {
+    if (c !== 'editor' && c !== 'viewer') {
+      throw new Error(`unknown form component <${ c }>, expected <editor> or <viewer>`);
+    }
+
+    registerClientPlugin(module, `${ prefix }.${ c }.additionalModules`);
+  });
+}
+
+/**
  * Return the modeler directory, as a string.
  *
  * @deprecated Will be removed in future Camunda Modeler versions without replacement.
