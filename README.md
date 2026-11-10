@@ -56,6 +56,44 @@ var moddleDescriptor = {
 registerBpmnJSModdleExtension(moddleDescriptor);
 ```
 
+### form-js
+
+[![Compatible with Camunda Modeler version 5.54+](https://img.shields.io/badge/Camunda%20Modeler-5.54+-blue.svg)](https://github.com/camunda/camunda-modeler)
+
+Register plugin to be passed as additional module to the form editor and the form preview:
+
+```javascript
+import {
+  registerFormJSPlugin
+} from 'camunda-modeler-plugin-helpers';
+
+const FormJSModule = {
+  __init__: [ 'myService' ],
+  myService: [ 'type', ... ]
+};
+
+// editor and preview (default)
+registerFormJSPlugin(FormJSModule);
+
+// editor only
+registerFormJSPlugin(FormJSModule, 'editor');
+```
+
+Register a plugin for Camunda 8 or Camunda 7 forms only:
+
+```javascript
+import {
+  registerCloudFormJSPlugin,
+  registerPlatformFormJSPlugin
+} from 'camunda-modeler-plugin-helpers';
+
+// Camunda 8 forms
+registerCloudFormJSPlugin(FormJSModule);
+
+// Camunda 7 forms
+registerPlatformFormJSPlugin(FormJSModule, 'editor');
+```
+
 ### UI Components
 
 [![Compatible with Camunda Modeler version 5.29+](https://img.shields.io/badge/Camunda%20Modeler-5.29+-blue.svg)](https://github.com/camunda/camunda-modeler)
